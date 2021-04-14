@@ -1,9 +1,8 @@
 package it.polito.tdp.anagrammi;
 
-import java.awt.TextField;
+import java.util.List;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.ResourceBundle;
 
 import it.polito.tdp.anagrammi.model.Anagram5;
@@ -11,11 +10,12 @@ import it.polito.tdp.anagrammi.model.Esito;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 
 public class FXMLController {
-	
-	Anagram5 anag = new Anagram5 ();
 
+	Anagram5 anag = new Anagram5 ();
+	
     @FXML
     private ResourceBundle resources;
 
@@ -67,19 +67,19 @@ public class FXMLController {
 		for(String si: errato)
 			erratiString += si+"\n";
 		txtErrato.setText(erratiString);
-				
+
 
     }
-    
 
     @FXML
     void btnReset(ActionEvent event) {
+
     	txtParola.setText("");
     	txtCorretto.setText("");
     	txtErrato.setText("");
 
+    	
     }
-    
 
     @FXML
     void initialize() {
@@ -92,4 +92,5 @@ public class FXMLController {
     public void setModel (Anagram5 a) {
     	anag=a;
     }
+
 }

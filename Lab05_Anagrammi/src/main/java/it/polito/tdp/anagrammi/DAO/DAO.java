@@ -25,9 +25,8 @@ public class DAO {
 			
 			/************ scatena l'eccezione QUI ************/
 			ResultSet rs = st.executeQuery();
-			rs.next();
-			
-			id=rs.getInt("id"); //se non trova nulla cosa fa???
+			if(rs.next())
+				id=rs.getInt("id"); //se non trova nulla cosa fa???
 
 			conn.close();
 		} catch (SQLException e) {

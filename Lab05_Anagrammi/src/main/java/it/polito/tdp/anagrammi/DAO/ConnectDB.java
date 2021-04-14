@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class ConnectDB {
 	
 	// check user e password
-	static private final String jdbcUrl = "jdbc:mysql://localhost/dictionary?user=root&password=240899SQL";
+	static private final String jdbcUrl = "jdbc:mysql://localhost/dizionario?user=root&password=240899SQL";
 
 	public static Connection getConnection() {
 
